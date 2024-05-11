@@ -1,9 +1,0 @@
-{
-    "manifest_version": 3,
-    "name": "catfish",
-    "description": "this extension has been created to help people to know if the website on which they are is a fishing site or not",
-    "version": "0.1",
-    "icons": {
-        "48": "../..//images/cat48.png"
-    }
-}
