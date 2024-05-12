@@ -6,14 +6,8 @@ chrome.runtime.onInstalled.addListener(() => {
       console.log('URL actuelle :', currentUrl);
     });
   });
+// Récupère l'URL de la page actuelle
+var url = window.location.href;
 
-const url = currentUrl;
-const pythonProcess = spawn('check.py', ['script.py', url]);
-
-pythonProcess.stdout.on('data', (data) => {
-    console.log(`Sortie du script Python : ${data}`);
-});
-
-pythonProcess.stderr.on('data', (data) => {
-    console.error(`Erreur du script Python : ${data}`);
-});
+// Envoie l'URL à l'API de messagerie de l'extension (par exemple)
+chrome.runtime.sendMessage({url: url});
