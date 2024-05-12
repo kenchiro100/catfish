@@ -2,8 +2,19 @@
     "manifest_version": 3,
     "name": "catfish",
     "description": "This extension has been created to help people to know if the website on which they are is a fishing site or not",
-    "version": "0.1",
+    "version": "1.0",
     "icons": {
+        "16": "usefull/images/cat16.png",
         "48": "usefull/images/cat48.png"
-    }
+    },
+    "action": {
+        "default_popup": "src/web/base.html",
+        "default_icon": "usefull/images/cat16.png"
+    },
+    "permissions": [
+        "tabs"
+      ],
+      "background": {
+        "service_worker": "src/back/back.js"
+      }
 }
